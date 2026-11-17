@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b16">
+    <meta name="description" content="Mst. Setara Khatun - CSE Student and Full-Stack Developer. Explore my skills, projects and education.">
+    <title>Setara Khatun | Developer Portfolio</title>
+    <link rel="stylesheet" href="tailwind-new.css">
+
+    <style>
+        body {
+            background: #080b16;
+            color: #e2e8f0;
+            font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg,#a78bfa,#818cf8,#38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glass {
+            background: rgba(255,255,255,.045);
+            border: 1px solid rgba(255,255,255,.09);
+            backdrop-filter: blur(16px);
+        }
+        .glow {
+            box-shadow: 0 0 70px rgba(139,92,246,.16);
+        }
+        .grid-bg {
+            background-image: linear-gradient(rgba(148,163,184,.045) 1px,transparent 1px),
+                              linear-gradient(90deg,rgba(148,163,184,.045) 1px,transparent 1px);
+            background-size: 45px 45px;
+        }
+        .project-card {
+            transition: transform .3s ease,border-color .3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(167,139,250,.55);
+        }
+        .skill-chip {
+            transition: all .25s ease;
+        }
+        .skill-chip:hover {
+            transform: translateY(-4px);
+            border-color: #8b5cf6;
+            background: rgba(139,92,246,.13);
+        }
+        .section-label {
+            color: #a78bfa;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            font-size: .75rem;
+            font-weight: 700;
+        }
+        .nav-link { transition: color .2s ease; }
+        .nav-link:hover { color: #a78bfa; }
+        .timeline-line {
+            background: linear-gradient(#8b5cf6,#38bdf8);
+        }
+        ::selection { background: #7c3aed; color: white; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 z-50 w-full border-b border-white/10 bg-[#080b16]/85 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+        <a href="#home" class="text-2xl font-black tracking-tight text-white">
+            Setara<span class="text-violet-400">.</span>
+        </a>
+
+        <div class="hidden items-center gap-8 md:flex">
+            <a class="nav-link text-sm text-slate-300" href="#home">Home</a>
+            <a class="nav-link text-sm text-slate-300" href="#about">About</a>
+            <a class="nav-link text-sm text-slate-300" href="#skills">Skills</a>
+            <a class="nav-link text-sm text-slate-300" href="#projects">Projects</a>
+            <a class="nav-link text-sm text-slate-300" href="#education">Education</a>
+            <a href="#contact" class="rounded-full bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-500">Let's Talk ↗</a>
+        </div>
+
+        <button id="menuButton" class="rounded-lg border border-white/10 px-3 py-2 text-white md:hidden" aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+        </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-[#080b16] px-6 py-5 md:hidden">
+        <div class="flex flex-col gap-5">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#education">Education</a>
+            <a class="nav-link text-violet-400" href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="grid-bg relative flex min-h-screen items-center overflow-hidden px-6 pb-20 pt-32 lg:px-10">
+    <div class="pointer-events-none absolute -left-40 top-40 h-96 w-96 rounded-full bg-violet-700/15 blur-[120px]"></div>
+    <div class="pointer-events-none absolute -right-40 bottom-10 h-96 w-96 rounded-full bg-blue-600/10 blur-[120px]"></div>
+
+    <div class="relative mx-auto grid w-full max-w-7xl items-center gap-16 lg:grid-cols-2">
+        <div>
+            <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-400/10 px-4 py-2 text-sm text-violet-300">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                CSE Student · Developer · Problem Solver
+            </div>
+
+            <p class="mb-4 text-lg text-slate-400">Hello, I'm</p>
+
+            <h1 class="text-5xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+                Mst. Setara<br>
+                <span class="gradient-text">Khatun.</span>
+            </h1>
+
+            <h2 class="mt-7 text-xl font-semibold text-slate-200 sm:text-2xl">
+                Building Ideas Into <span class="gradient-text">Digital Solutions.</span>
+            </h2>
+
+            <p class="mt-6 max-w-xl text-base leading-8 text-slate-400">
+                I am a Computer Science and Engineering student passionate about
+                software development, web technologies and intelligent applications.
+                I enjoy learning new technologies and creating practical solutions
+                to real-world problems.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-4">
+                <a href="#projects" class="rounded-xl bg-violet-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-violet-900/30 transition hover:-translate-y-1 hover:bg-violet-500">
+                    Explore My Work ↗
+                </a>
+                <a href="#contact" class="rounded-xl border border-white/15 px-7 py-3.5 font-semibold text-white transition hover:border-violet-400 hover:text-violet-300">
+                    Contact Me
+                </a>
+            </div>
+
+            <div class="mt-12 flex flex-wrap gap-8 border-t border-white/10 pt-8">
+                <div>
+                    <p class="text-3xl font-bold text-white">03+</p>
+                    <p class="mt-1 text-sm text-slate-500">Featured Projects</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-white">CSE</p>
+                    <p class="mt-1 text-sm text-slate-500">Academic Background</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-white">∞</p>
+                    <p class="mt-1 text-sm text-slate-500">Learning Mindset</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-md">
+            <div class="absolute inset-0 scale-90 rounded-full bg-violet-600/20 blur-3xl"></div>
+            <div class="glass glow relative rounded-[2rem] p-5">
+                <div class="overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900">
+                    <img src="profile.jpeg" alt="Portrait of Setara Khatun" class="h-[390px] w-full object-cover object-center sm:h-[460px]">
+                </div>
+                <div class="mt-5 flex items-center justify-between gap-3">
+                    <div>
+                        <p class="font-bold text-white">Setara Khatun</p>
+                        <p class="mt-1 text-sm text-slate-400">Aspiring Software Developer</p>
+                    </div>
+                    <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs text-emerald-300">Available to Connect</span>
+                </div>
+            </div>
+            <div class="glass absolute -left-8 top-16 hidden rounded-xl px-4 py-3 shadow-xl sm:block">
+                <p class="text-sm font-semibold text-violet-300">Creative Thinker</p>
+                <p class="text-xs text-slate-400">Always learning</p>
+            </div>
+            <div class="glass absolute -bottom-7 -right-5 hidden rounded-xl px-4 py-3 shadow-xl sm:block">
+                <p class="text-sm font-semibold text-sky-300">Code · Create · Grow</p>
+                <p class="text-xs text-slate-400">One step at a time</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="border-t border-white/5 px-6 py-24 lg:px-10">
+    <div class="mx-auto max-w-7xl">
+        <p class="section-label">Get to know me</p>
+        <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">About <span class="gradient-text">Me</span></h2>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-2">
+            <div>
+                <h3 class="text-2xl font-semibold leading-relaxed text-white">
+                    Turning curiosity into skills, and skills into meaningful projects.
+                </h3>
+                <p class="mt-6 leading-8 text-slate-400">
+                    My name is Mst. Setara Khatun. I am studying Computer Science
+                    and Engineering at Northern University of Business and Technology
+                    Khulna. My interests include web development, backend engineering,
+                    databases and artificial intelligence.
+                </p>
+                <p class="mt-4 leading-8 text-slate-400">
+                    I enjoy working on projects that solve practical problems.
+                    Through hands-on development, I aim to strengthen my technical
+                    knowledge, improve my problem-solving ability and grow as a
+                    software developer.
+                </p>
+                <a href="#contact" class="mt-8 inline-flex items-center gap-2 font-semibold text-violet-300 hover:text-violet-200">
+                    Let's connect <span>→</span>
+                </a>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl">💻</div>
+                    <h3 class="mt-4 font-bold text-white">Development</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Building responsive web applications and software projects.</p>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl">🧠</div>
+                    <h3 class="mt-4 font-bold text-white">AI & Innovation</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Exploring intelligent systems and practical AI applications.</p>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl">📚</div>
+                    <h3 class="mt-4 font-bold text-white">Continuous Learning</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Learning new tools, technologies and development practices.</p>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl">🎯</div>
+                    <h3 class="mt-4 font-bold text-white">Problem Solving</h3>
+                    <p class="mt-2 text-sm leading-6 text-slate-400">Turning ideas and challenges into useful solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="border-y border-white/5 bg-white/[0.02] px-6 py-24 lg:px-10">
+    <div class="mx-auto max-w-7xl">
+        <p class="section-label">What I work with</p>
+        <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="mt-5 max-w-2xl leading-7 text-slate-400">
+            Technologies and tools I have explored through my coursework and projects.
+        </p>
+
+        <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">HTML5</p><p class="mt-1 text-sm text-slate-500">Web Structure</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">CSS3</p><p class="mt-1 text-sm text-slate-500">Web Styling</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">Tailwind CSS</p><p class="mt-1 text-sm text-slate-500">UI Development</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">JavaScript</p><p class="mt-1 text-sm text-slate-500">Frontend</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">Python</p><p class="mt-1 text-sm text-slate-500">Programming</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">PHP / Laravel</p><p class="mt-1 text-sm text-slate-500">Backend</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">Django</p><p class="mt-1 text-sm text-slate-500">Backend</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">React</p><p class="mt-1 text-sm text-slate-500">Frontend</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">PostgreSQL</p><p class="mt-1 text-sm text-slate-500">Database</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">MySQL</p><p class="mt-1 text-sm text-slate-500">Database</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">C Programming</p><p class="mt-1 text-sm text-slate-500">Fundamentals</p></div>
+            <div class="skill-chip glass rounded-xl p-5"><p class="text-lg font-bold text-white">Git & GitHub</p><p class="mt-1 text-sm text-slate-500">Version Control</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="px-6 py-24 lg:px-10">
+    <div class="mx-auto max-w-7xl">
+        <p class="section-label">Selected work</p>
+        <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="mt-5 max-w-2xl leading-7 text-slate-400">
+            A selection of software projects I have been developing and exploring.
+        </p>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <article class="project-card glass rounded-2xl p-7">
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl">🎓</span>
+                    <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">Developed</span>
+                </div>
+                <h3 class="mt-7 text-2xl font-bold text-white">SkillHub</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-400">
+                    A skill learning and mentorship platform designed to connect
+                    students, mentors and administrators through courses, lessons,
+                    live classes, progress tracking and communication features.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">Laravel</span>
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">PHP</span>
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">MySQL</span>
+                </div>
+            </article>
+
+            <article class="project-card glass rounded-2xl p-7">
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl">✈️</span>
+                    <span class="rounded-full bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-300">In Development</span>
+                </div>
+                <h3 class="mt-7 text-2xl font-bold text-white">AeroNexa AI</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-400">
+                    An AI-powered travel agency workspace focused on flight monitoring,
+                    schedule change notifications, ticket management and business
+                    analytics.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">Django</span>
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">Python</span>
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">AI / ML</span>
+                </div>
+            </article>
+
+            <article class="project-card glass rounded-2xl p-7">
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl">🤖</span>
+                    <span class="rounded-full bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-300">In Development</span>
+                </div>
+                <h3 class="mt-7 text-2xl font-bold text-white">Talentora AI</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-400">
+                    An intelligent recruitment platform concept featuring AI-assisted
+                    resume screening, candidate-job matching and recruiter
+                    management workflows.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">React</span>
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">Django</span>
+                    <span class="rounded-md bg-white/5 px-3 py-1 text-xs text-violet-300">PostgreSQL</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="border-y border-white/5 bg-white/[0.02] px-6 py-24 lg:px-10">
+    <div class="mx-auto max-w-7xl">
+        <p class="section-label">Academic background</p>
+        <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">My <span class="gradient-text">Education</span></h2>
+
+        <div class="relative mt-12 max-w-3xl space-y-8 pl-8">
+            <div class="timeline-line absolute bottom-4 left-[7px] top-3 w-px"></div>
+
+            <article class="relative glass rounded-2xl p-6">
+                <span class="absolute -left-[29px] top-8 h-4 w-4 rounded-full border-4 border-[#080b16] bg-violet-400"></span>
+                <p class="text-sm font-semibold text-violet-300">Currently Studying</p>
+                <h3 class="mt-2 text-xl font-bold text-white">BSc in Computer Science & Engineering</h3>
+                <p class="mt-2 text-slate-400">Northern University of Business and Technology Khulna</p>
+            </article>
+
+            <article class="relative glass rounded-2xl p-6">
+                <span class="absolute -left-[29px] top-8 h-4 w-4 rounded-full border-4 border-[#080b16] bg-sky-400"></span>
+                <p class="text-sm font-semibold text-sky-300">2021</p>
+                <h3 class="mt-2 text-xl font-bold text-white">Higher Secondary Certificate (HSC)</h3>
+                <p class="mt-2 text-slate-400">BAF Shaheen College, Jashore</p>
+                <p class="mt-2 text-sm text-slate-500">GPA: 4.61</p>
+            </article>
+
+            <article class="relative glass rounded-2xl p-6">
+                <span class="absolute -left-[29px] top-8 h-4 w-4 rounded-full border-4 border-[#080b16] bg-sky-400"></span>
+                <p class="text-sm font-semibold text-sky-300">2019</p>
+                <h3 class="mt-2 text-xl font-bold text-white">Secondary School Certificate (SSC)</h3>
+                <p class="mt-2 text-slate-400">Ichhali Secondary School</p>
+                <p class="mt-2 text-sm text-slate-500">GPA: 5.00</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative overflow-hidden px-6 py-24 lg:px-10">
+    <div class="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-700/15 blur-[120px]"></div>
+    <div class="glass relative mx-auto max-w-4xl rounded-3xl p-8 text-center sm:p-14">
+        <p class="section-label">Have a project in mind?</p>
+        <h2 class="mt-5 text-4xl font-black text-white sm:text-5xl">
+            Let's Build Something <span class="gradient-text">Great.</span>
+        </h2>
+        <p class="mx-auto mt-6 max-w-2xl leading-8 text-slate-400">
+            I am always interested in learning, collaborating and exploring new ideas.
+            Feel free to connect with me through GitHub.
+        </p>
+        <a href="https://github.com/setara3024-web" target="_blank" rel="noopener noreferrer"
+           class="mt-9 inline-flex items-center gap-3 rounded-xl bg-violet-600 px-8 py-4 font-semibold text-white transition hover:-translate-y-1 hover:bg-violet-500">
+            Visit My GitHub <span>↗</span>
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 px-6 py-8">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+        <p class="text-sm text-slate-400">© <span id="year"></span> Mst. Setara Khatun. All rights reserved.</p>
+        <a href="#home" class="text-sm font-semibold text-violet-300 hover:text-violet-200">Back to top ↑</a>
+        <a href="https://github.com/setara3024-web" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-white">GitHub ↗</a>
+    </div>
+</footer>
+
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuButton.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuButton.setAttribute('aria-expanded', String(!isHidden));
+        menuButton.textContent = isHidden ? '☰' : '✕';
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.textContent = '☰';
+        });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
